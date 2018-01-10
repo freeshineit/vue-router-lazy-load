@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-npm install
+yarn install 或 npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
@@ -16,5 +16,11 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# open node server
+npm run server
+
 ```
+
+
 

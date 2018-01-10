@@ -1,18 +1,20 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>bar</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'bar',
-  data () {
-    return {
-      msg: 'bar'
-    }
-  }
+  	data () {
+    	return {
+      		msg: 'bar'
+		}
+  	},
+  	mounted () {
+		console.log('mounted')
+	}
 }
 </script>
 

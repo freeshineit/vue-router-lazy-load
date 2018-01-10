@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import Index from '@/components/HelloWorld'
+const Index = r => require.ensure([], () => r(require('../views/index.vue')), 'index')
 // const Foo = resolve => require(['../components/foo/index.vue'], resolve)
 // const Bar = resolve => require(['../components/bar/index.vue'], resolve)
 // import Foo from '@/components/foo/index'
@@ -13,10 +14,26 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+	{
+		path: '/',
+		redirect: '/index'
+	},
     {
-    	path: '/',
-      	name: 'HelloWorld',
-      	component: HelloWorld
+    	path: '/index',
+      	name: 'index',
+		component: Index,
+		children: [
+			{
+				path: 'foo',
+				name: 'index/foo',
+				component: Foo
+			},
+			{
+				path: 'bar',
+				name: 'index/bar',
+				component: Bar
+			}
+		]
     },
     {
 		path: '/foo',
