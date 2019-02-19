@@ -24,37 +24,37 @@ const Bar = r => require.ensure([], () => r(require('../components/bar/index.vue
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-	{
-		path: '/',
-		redirect: '/index'
-	},
-    {
-    	path: '/index',
-      	name: 'index',
-		component: Index,
-		children: [
-			{
-				path: 'foo',
-				name: 'index/foo',
-				component: Foo
-			},
-			{
-				path: 'bar',
-				name: 'index/bar',
-				component: Bar
-			}
-		]
-    },
-    {
-		path: '/foo',
-		name: 'foo',
-		component: Foo
-	},
-	{
-		path: '/bar',
-		name: 'bar',
-		component: Bar
-	}
-  ]
+    routes: [
+        {
+            path: '/',
+            redirect: '/index'
+        },
+        {
+            path: '/index',
+            name: 'index',
+            component: Index,
+            children: [
+                {
+                    path: 'foo',
+                    name: 'index/foo',
+                    component: Foo
+                },
+                {
+                    path: 'bar',
+                    name: 'index/bar',
+                    component: Bar
+                }
+            ]
+        },
+        {
+            path: '/foo',
+            name: 'foo',
+            component: Foo
+        },
+        {
+            path: '/bar',
+            name: 'bar',
+            component: Bar
+        }
+    ]
 })

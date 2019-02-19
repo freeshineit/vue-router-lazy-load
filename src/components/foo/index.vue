@@ -6,18 +6,19 @@
 
 <script>
 export default {
-  name: 'foo',
-  data () {
+  name: "foo",
+  data() {
     return {
-      msg: 'foo'
-    }
+      msg: "foo"
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
